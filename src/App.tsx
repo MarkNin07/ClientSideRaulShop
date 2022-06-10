@@ -1,9 +1,18 @@
+import { BrowserRouter } from "react-router-dom"
+import StockistForm from "./components/StockistForm"
+import PrivateRoutes from "./routes/PrivateRoutes"
+
 
 function App() {
 
   return (
     <div>
-      <h1>Hello world</h1>
+      <BrowserRouter>
+      <PrivateRoutes />
+      <footer>
+        This is my footer
+      </footer>
+      </BrowserRouter>
     </div>
   )
 }
