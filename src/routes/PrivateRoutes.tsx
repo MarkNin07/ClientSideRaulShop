@@ -3,9 +3,8 @@ import { Link, Route, Routes } from 'react-router-dom'
 import StockistForm from '../components/StockistForm'
 import StockistsList from '../components/StockistsList'
 
-type Props = {}
 
-function PrivateRoutes({}: Props) {
+function PrivateRoutes() {
   return (
     <div>
         <Link to='/'> CreateStockist </Link> 

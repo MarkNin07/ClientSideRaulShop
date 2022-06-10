@@ -25,8 +25,8 @@ const stockistSlice = createSlice({
         addStockist(state, action){
             state.push(action.payload);
         },
-        getAllStockist(state, action){
-            state.push(action.payload);
+        getAllStockists(state, action){
+            return action.payload;
         },
         deleteStockist(state, action){
             state.push(action.payload);
@@ -34,7 +34,7 @@ const stockistSlice = createSlice({
     }
 })
 
-export const {addStockist, getAllStockist, deleteStockist} = stockistSlice.actions
+export const {addStockist, getAllStockists, deleteStockist} = stockistSlice.actions
 
 export default stockistSlice.reducer
 

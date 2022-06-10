@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit"
-import postsReducer from './slice/ProviderSlice'
+import postsReducer, { stockistType } from './slice/ProviderSlice'
 
 
 const store = configureStore(
@@ -9,5 +9,6 @@ const store = configureStore(
         }
     }
 )
-
+type store = {stockist:stockistType[]}
+export type{store}
 export default store
