@@ -1,11 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit"
 import postsReducer, { stockistType } from './slice/ProviderSlice'
-
+import productReducer from './slice/ProductSlice'
 
 const store = configureStore(
     {
         reducer: {
-            stockist: postsReducer            
+            stockist: postsReducer,
+            product: productReducer           
         }
     }
 )

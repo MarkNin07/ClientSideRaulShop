@@ -34,7 +34,7 @@ const StockistsList = () => {
             <h1>List of all the stockists</h1>
             <ul>{stockistsInfo.map((prov:stockistType, index)=>
             <li key={index}>
-                {prov.stockistName} <button onClick={()=>handleDel(prov.stockistId)} >Delete Stockist</button>
+                {prov.stockistName} <button onClick={()=>handleDel(prov.stockistId)} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded'>Delete Stockist</button>
             </li>)}
             </ul>
         </div>
