@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 
 type stockistType = {
@@ -10,10 +10,10 @@ type stockistType = {
 
 const initialState:stockistType[] = [
     {
-        stockistId: '1',
-        stockistName: 'Alan Brito',
-        stockistPersonalId: '456JDK',
-        phoneNumber: '1954890765'
+        stockistId: '',
+        stockistName: '',
+        stockistPersonalId: '',
+        phoneNumber: ''
     }
 ]
 
@@ -28,8 +28,9 @@ const stockistSlice = createSlice({
         getAllStockists(state, action){
             return action.payload;
         },
-        deleteStockist(state, action){
-            state.push(action.payload);
+        deleteStockist(state, action: PayloadAction<string>){
+            const newProvList = state.filter((prov) => prov.stockistId != action.payload);
+            return newProvList
         }
     }
 })

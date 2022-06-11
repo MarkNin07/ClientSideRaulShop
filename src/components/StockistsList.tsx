@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import delStockist from '../actions/delete/DeleteStockist';
 import getStockists from '../actions/get/GetStockists';
-import { getAllStockists, stockistType } from '../state/slice/ProviderSlice';
+import { deleteStockist, getAllStockists, stockistType } from '../state/slice/ProviderSlice';
 import {store} from '../state/Store'
 
 const StockistsList = () => {
@@ -19,10 +20,23 @@ const StockistsList = () => {
         )
         },[])
 
+    const handleDel = async (id:string) => {
+        console.log(id);        
+        const response = await delStockist (id) 
+        if(response.stockistDeleted){
+            dispatch(deleteStockist(id))
+        }
+    }
+    
+
     return(
         <div>
             <h1>List of all the stockists</h1>
-            <ul>{stockistsInfo.map((prov:stockistType)=><li key={prov.stockistId}>{prov.stockistName}</li>)}</ul>
+            <ul>{stockistsInfo.map((prov:stockistType, index)=>
+            <li key={index}>
+                {prov.stockistName} <button onClick={()=>handleDel(prov.stockistId)} >Delete Stockist</button>
+            </li>)}
+            </ul>
         </div>
     )
 
