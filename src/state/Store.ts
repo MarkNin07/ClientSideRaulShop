@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit"
 import postsReducer, { stockistType } from './slice/ProviderSlice'
-import productReducer from './slice/ProductSlice'
+import productReducer, { productType } from './slice/ProductSlice'
 
 const store = configureStore(
     {
@@ -10,6 +10,9 @@ const store = configureStore(
         }
     }
 )
-type store = {stockist:stockistType[]}
+type store = {
+    stockist: stockistType[]
+    product: productType[]
+}
 export type{store}
 export default store
