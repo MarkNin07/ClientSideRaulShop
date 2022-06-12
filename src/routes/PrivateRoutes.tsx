@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
+import BillsList from '../components/BillsList'
 import ProductForm from '../components/ProductForm'
 import ProductList from '../components/ProductList'
 import SellingForm from '../components/SellingForm'
@@ -15,6 +16,7 @@ function PrivateRoutes() {
         <Link to="/createProduct"> Create Product--  </Link>
         <Link to='/productList'>Products--  </Link>
         <Link to='/sellProduct'>Sell Product--  </Link>
+        <Link to='/getAllBills'>Check all bills--</Link>
 
         <Routes>
             <Route path="/" element={<StockistForm/>} />
@@ -22,6 +24,7 @@ function PrivateRoutes() {
             <Route path="/createProduct" element={<ProductForm />} />
             <Route path="/productList" element={<ProductList />} />
             <Route path="/sellProduct" element={<SellingForm/>} />
+            <Route path="/getAllBills" element={< BillsList />} />
         </Routes>
     </div>
   )
