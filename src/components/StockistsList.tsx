@@ -21,7 +21,6 @@ const StockistsList = () => {
         },[])
 
     const handleDel = async (id:string) => {
-        console.log(id);        
         const response = await delStockist (id) 
         if(response.stockistDeleted){
             dispatch(deleteStockist(id))

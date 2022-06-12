@@ -57,7 +57,7 @@ const ProductForm = () => {
           <label htmlFor="description">Product Description:</label>
           <input type="text" name="description" 
             value={description} onChange={ onChangeDescription }
-            className='border-2 border-blue-500 rounded-md'/>
+            className='border-2 border-blue-500 rounded-md'/> <br/>
 
           <label htmlFor="minAmount" >Minimum product amount:</label>
           <input type="text" name="minAmount" 
@@ -72,12 +72,12 @@ const ProductForm = () => {
            <label htmlFor="unitsAv">Units available</label>
            <input type="number" name="unitsAv" 
             value={unitsAvailable} onChange={ (e) => setUnitsAvailable(parseInt(e.target.value)) }
-            className='border-2 border-blue-500 rounded-md'/>
+            className='border-2 border-blue-500 rounded-md'/> <br />
 
            <label htmlFor="provName">Provider Name</label>
            <input type="text" name="provName" 
             value={stockistName} onChange={ onChangestockistName }
-            className='border-2 border-blue-500 rounded-md'/>
+            className='border-2 border-blue-500 rounded-md'/> <br/>
 
            <button onClick={ createProd } className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >Send</button>           
 
