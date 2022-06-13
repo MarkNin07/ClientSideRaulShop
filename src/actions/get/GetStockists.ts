@@ -2,7 +2,7 @@ import * as React from 'react';
 
 const getStockists = async () =>{
 
-    let getRequest = await fetch('http://localhost:8080/get/all/stockists')
+    let getRequest = await fetch('https://raulshwhop.herokuapp.com/get/all/stockists')
 
     let data = await getRequest.json()
 

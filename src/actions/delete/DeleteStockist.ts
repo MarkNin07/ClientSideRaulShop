@@ -6,7 +6,7 @@ const HEADERS = {
 }
 
 const delStockist = async (id: string) => {
-    const response = await fetch(`http://localhost:8080/delete/stockist/${id}`,{
+    const response = await fetch(`https://raulshwhop.herokuapp.com/delete/stockist/${id}`,{
         method: 'DELETE',
         headers: HEADERS
     })

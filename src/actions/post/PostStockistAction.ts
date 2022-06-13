@@ -9,7 +9,7 @@ const postStockist = async (providerName:string, provId:string, phoneNumber:stri
         "phoneNumber": phoneNumber
     }
 
-    let postRequest = await fetch('http://localhost:8080/create/stockist', { 
+    let postRequest = await fetch('https://raulshwhop.herokuapp.com/create/stockist', { 
         method: 'POST',
         headers: {'content-type':'application/json'},
         body: JSON.stringify(postBody)

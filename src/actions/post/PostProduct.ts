@@ -14,7 +14,7 @@ const postProduct = async (productName:string, price:number,
             "stockistName": stockistName
         }
 
-        let postProdReq = await fetch('http://localhost:8080/create/product', {
+        let postProdReq = await fetch('https://raulshwhop.herokuapp.com/create/product', {
             method: 'POST',
             headers: {'content-type':'application/json'},
             body: JSON.stringify(postBody)

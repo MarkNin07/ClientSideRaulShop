@@ -10,7 +10,7 @@ const postBill = async (productName:string, date:string, clientName:string, sale
         "productName": productName
     }
 
-    let postBillReq = await fetch('http://localhost:8080/create/bill', {
+    let postBillReq = await fetch('https://raulshwhop.herokuapp.com/create/bill', {
         method: 'POST',
         headers: {'content-type':'application/json'},
         body: JSON.stringify(postBillBody)
