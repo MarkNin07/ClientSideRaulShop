@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import delStockist from '../actions/delete/DeleteStockist';
 import getStockists from '../actions/get/GetStockists';
 import { deleteStockist, getAllStockists, stockistType } from '../state/slice/ProviderSlice';
-import {store} from '../state/Store'
+import store from '../state/Store'
 
 const StockistsList = () => {
 
